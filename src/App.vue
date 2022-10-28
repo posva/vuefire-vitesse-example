@@ -22,5 +22,9 @@ useHead({
 </script>
 
 <template>
-  <RouterView />
+  <RouterView v-slot="{ Component }">
+    <Suspense>
+      <component :is="Component" v-if="Component" />
+    </Suspense>
+  </RouterView>
 </template>

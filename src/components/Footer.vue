@@ -14,6 +14,14 @@ const toggleLocales = () => {
       <div i-carbon-campsite />
     </RouterLink>
 
+    <RouterLink class="icon-btn mx-2" to="/firestore-pinia" title="Firestore">
+      <div i-carbon-pin />
+    </RouterLink>
+
+    <RouterLink class="icon-btn mx-2" to="/firebase" title="Firestore">
+      <div i-carbon-overlay />
+    </RouterLink>
+
     <button class="icon-btn mx-2 !outline-none" :title="t('button.toggle_dark')" @click="toggleDark()">
       <div i="carbon-sun dark:carbon-moon" />
     </button>
