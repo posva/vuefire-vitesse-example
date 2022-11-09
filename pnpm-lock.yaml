@@ -43,7 +43,7 @@ specifiers:
   vue-i18n: ^9.2.2
   vue-router: ^4.1.5
   vue-tsc: ^1.0.0
-  vuefire: file:.yalc/vuefire
+  vuefire: 3.0.0-alpha.5
 
 dependencies:
   '@unocss/reset': 0.45.28
@@ -56,7 +56,7 @@ dependencies:
   vue-demi: 0.13.11_vue@3.2.40
   vue-i18n: 9.2.2_vue@3.2.40
   vue-router: 4.1.5_vue@3.2.40
-  vuefire: file:.yalc/vuefire_firebase@9.13.0+vue@3.2.40
+  vuefire: 3.0.0-alpha.5_firebase@9.13.0+vue@3.2.40
 
 devDependencies:
   '@antfu/eslint-config': 0.27.0_z4bbprzjrhnsfa24uvmcbu7f5q
@@ -8966,6 +8966,23 @@ packages:
       '@vue/server-renderer': 3.2.40_vue@3.2.40
       '@vue/shared': 3.2.40
 
+  /vuefire/3.0.0-alpha.5_firebase@9.13.0+vue@3.2.40:
+    resolution: {integrity: sha512-WZhVu+KZ7DR3dkQVpX37jIZqVWZAXghaL1FLNe1NG2fyHHJztSOuQTisSkYgnBgyyh4R+dIuxm5tnzA0xAxuJA==}
+    peerDependencies:
+      '@vue/composition-api': '*'
+      firebase: ^9.0.0
+      vue: ^2.7.0 || ^3.2.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      firebase:
+        optional: true
+    dependencies:
+      firebase: 9.13.0
+      vue: 3.2.40
+      vue-demi: 0.13.11_vue@3.2.40
+    dev: false
+
   /w3c-xmlserializer/3.0.0:
     resolution: {integrity: sha512-3WFqGEgSXIyGhOmAFtlicJNMjEps8b1MG31NCA0/vOF9+nKMUW1ckhi9cnNHmf88Rzw5V+dwIwsm2C7X8k9aQg==}
     engines: {node: '>=12'}
@@ -9382,23 +9399,3 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
-
-  file:.yalc/vuefire_firebase@9.13.0+vue@3.2.40:
-    resolution: {directory: .yalc/vuefire, type: directory}
-    id: file:.yalc/vuefire
-    name: vuefire
-    version: 3.0.0-alpha.4
-    peerDependencies:
-      '@vue/composition-api': '*'
-      firebase: ^9.0.0
-      vue: ^2.7.0 || ^3.2.0
-    peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
-      firebase:
-        optional: true
-    dependencies:
-      firebase: 9.13.0
-      vue: 3.2.40
-      vue-demi: 0.13.11_vue@3.2.40
-    dev: false
