@@ -23,6 +23,7 @@
     }
   ],
   "hosting": {
+    "site": "vitesse-vuefire-example",
     "public": "dist",
     "ignore": [
       "firebase.json",
