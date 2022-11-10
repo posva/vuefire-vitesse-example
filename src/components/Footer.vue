@@ -18,7 +18,7 @@ const toggleLocales = () => {
       <div i-carbon-pin />
     </RouterLink>
 
-    <RouterLink class="icon-btn mx-2" to="/firebase" title="Firestore">
+    <RouterLink class="icon-btn mx-2" to="/firestore-plain" title="Firestore">
       <div i-carbon-overlay />
     </RouterLink>
 
