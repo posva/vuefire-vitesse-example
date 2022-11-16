@@ -5,7 +5,11 @@ on:
     branches:
       - main
     paths:
-      - '.github/workflows/firebase-hosting-merge.yml'
+      - src
+      - public
+      - locales
+      - pnpm-lock.yaml
+      - .github/workflows/firebase-hosting-merge.yml
 
 jobs:
   deploy_live_website:
