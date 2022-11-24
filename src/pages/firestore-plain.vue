@@ -11,6 +11,6 @@ const { data: config } = useDocument(configRef)
 </script>
 
 <template>
-  <pgr>config:</pgr>
+  <p>config:</p>
   <pre class="text-left">{{ config }}</pre>
 </template>
