@@ -7,3 +7,6 @@ dist-ssr
 node_modules
 .idea/
 *.log
+yalc.lock
+.yalc
+service-account.json

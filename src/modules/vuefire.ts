@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app'
-import { ReCaptchaV3Provider } from 'firebase/app-check'
+import { CustomProvider, ReCaptchaV3Provider } from 'firebase/app-check'
 import { VueFire, VueFireAppCheck, useSSRInitialState } from 'vuefire'
 import { type UserModule } from '~/types'
 
@@ -20,10 +20,14 @@ export const install: UserModule = ({ isClient, initialState, app }) => {
     modules: [
       VueFireAppCheck({
         debug: process.env.NODE_ENV !== 'production',
-        provider: new ReCaptchaV3Provider(
-          '6LfJ0vgiAAAAAHheQE7GQVdG_c9m8xipBESx_SKI',
-        ),
-        isTokenAutoRefreshEnabled: true,
+        provider: isClient
+          ? new ReCaptchaV3Provider(
+            '6LfJ0vgiAAAAAHheQE7GQVdG_c9m8xipBESx_SKI',
+          )
+          : new CustomProvider({
+            getToken: () => Promise.resolve({ token: '', expireTimeMillis: 1 }),
+          }),
+        isTokenAutoRefreshEnabled: isClient,
       }),
     ],
   })
